@@ -1,0 +1,36 @@
+
+.taskForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media Queries */
+  
+  /* Tablets (481px to 768px) */
+  @media (max-width: 768px) {
+    .taskForm {
+      padding: 15px;
+    }
+  
+    .ant-input,
+    .ant-input-textarea {
+      font-size: 16px;
+    }
+  }
+  
+  /* Mobile (480px and below) */
+  @media (max-width: 480px) {
+    .taskForm {
+      padding: 10px;
+    }
+  
+    .ant-input,
+    .ant-input-textarea {
+      font-size: 14px;
+    }
+  }
+  

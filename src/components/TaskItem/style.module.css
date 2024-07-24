@@ -1,0 +1,69 @@
+
+.taskItem {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .taskItemEdit {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .taskItemEdit .ant-input,
+  .taskItemEdit .ant-input-textarea {
+    margin-bottom: 10px;
+  }
+  
+  .taskItemActions .ant-btn-link {
+    margin-left: 10px;
+  }
+  
+  .taskItemCard {
+    width: 100%;
+  }
+  
+  .taskItemCard .ant-card-meta-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .taskItemCard .ant-card-meta-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Media Queries */
+  
+  /* Tablets (481px to 768px) */
+  @media (max-width: 768px) {
+    .taskItemCard .ant-card-meta-title {
+      font-size: 16px;
+    }
+  
+    .taskItemCard .ant-card-meta-description {
+      font-size: 12px;
+    }
+  
+    .taskItemEdit .ant-input,
+    .taskItemEdit .ant-input-textarea {
+      font-size: 16px;
+    }
+  }
+  
+  /* Mobile (480px and below) */
+  @media (max-width: 480px) {
+    .taskItemCard .ant-card-meta-title {
+      font-size: 14px;
+    }
+  
+    .taskItemCard .ant-card-meta-description {
+      font-size: 10px;
+    }
+  
+    .taskItemEdit .ant-input,
+    .taskItemEdit .ant-input-textarea {
+      font-size: 14px;
+    }
+  }
+  

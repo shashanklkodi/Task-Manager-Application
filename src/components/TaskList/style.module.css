@@ -1,0 +1,134 @@
+
+.taskListContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .taskListTitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .taskItemView {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .taskItemTitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .taskItemDescription {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .taskItemEdit {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .taskItemEdit .ant-input,
+  .taskItemEdit .ant-input-textarea {
+    margin-bottom: 10px;
+  }
+  
+  .taskItemActions .ant-btn-link {
+    margin-left: 10px;
+  }
+  
+  /* Media Queries */
+  
+  /* Tablets (481px to 768px) */
+  @media (max-width: 768px) {
+    .taskListContainer {
+      padding: 15px;
+    }
+  
+    .taskListTitle {
+      font-size: 20px;
+    }
+  
+    .taskItem {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .taskItemView {
+      flex-direction: column;
+    }
+  
+    .taskItemTitle {
+      font-size: 16px;
+    }
+  
+    .taskItemDescription {
+      font-size: 12px;
+    }
+  
+    .taskItemEdit .ant-input,
+    .taskItemEdit .ant-input-textarea {
+      width: 100%;
+    }
+  
+    .taskItemActions {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .taskItemActions .ant-btn-link {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+  
+  /* Mobile (480px and below) */
+  @media (max-width: 480px) {
+    .taskListContainer {
+      padding: 10px;
+    }
+  
+    .taskListTitle {
+      font-size: 18px;
+    }
+  
+    .taskItem {
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+  
+    .taskItemTitle {
+      font-size: 14px;
+    }
+  
+    .taskItemDescription {
+      font-size: 10px;
+    }
+  
+    .taskItemEdit .ant-input,
+    .taskItemEdit .ant-input-textarea {
+      margin-bottom: 8px;
+    }
+  
+    .taskItemActions .ant-btn-link {
+      margin-top: 3px;
+    }
+  }
+  
