@@ -1,16 +1,26 @@
-
 .taskListContainer {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-  }
-  
-  .taskListTitle {
+}
+
+.taskListTitle {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .taskItem {
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filterSelect,
+.sortSelect {
+    width: 200px;
+}
+
+.taskItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,116 +29,111 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #fff;
-  }
-  
-  .taskItemView {
-    display: flex;
-    justify-content: space-between;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.taskItem:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.taskItemCard {
     width: 100%;
-  }
-  
-  .taskItemTitle {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.taskItemCard .ant-card-meta-title {
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  .taskItemDescription {
+}
+
+.taskItemCard .ant-card-meta-description {
     font-size: 14px;
     color: #666;
-  }
-  
-  .taskItemEdit {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .taskItemEdit .ant-input,
-  .taskItemEdit .ant-input-textarea {
-    margin-bottom: 10px;
-  }
-  
-  .taskItemActions .ant-btn-link {
+}
+
+.taskItemActions .ant-btn-link {
     margin-left: 10px;
-  }
-  
-  /* Media Queries */
-  
-  /* Tablets (481px to 768px) */
-  @media (max-width: 768px) {
+}
+
+.completed {
+    background-color: #e6ffe6; 
+    border-color: #b3e6b3; 
+}
+
+/* Media Queries */
+
+/* Tablets (481px to 768px) */
+@media (max-width: 768px) {
     .taskListContainer {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .taskListTitle {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filterSelect,
+    .sortSelect {
+        margin-bottom: 10px;
+    }
+
     .taskItem {
-      flex-direction: column;
-      align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
-  
-    .taskItemView {
-      flex-direction: column;
-    }
-  
-    .taskItemTitle {
-      font-size: 16px;
-    }
-  
-    .taskItemDescription {
-      font-size: 12px;
-    }
-  
+
     .taskItemEdit .ant-input,
     .taskItemEdit .ant-input-textarea {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .taskItemActions {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-  
+
     .taskItemActions .ant-btn-link {
-      margin-left: 0;
-      margin-top: 5px;
+        margin-left: 0;
+        margin-top: 5px;
     }
-  }
-  
-  /* Mobile (480px and below) */
-  @media (max-width: 480px) {
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
     .taskListContainer {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     .taskListTitle {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .taskItem {
-      padding: 5px;
-      margin-bottom: 5px;
+        padding: 5px;
+        margin-bottom: 5px;
     }
-  
+
     .taskItemTitle {
-      font-size: 14px;
+        font-size: 14px;
     }
-  
+
     .taskItemDescription {
-      font-size: 10px;
+        font-size: 10px;
     }
-  
+
     .taskItemEdit .ant-input,
     .taskItemEdit .ant-input-textarea {
-      margin-bottom: 8px;
+        margin-bottom: 8px;
     }
-  
+
     .taskItemActions .ant-btn-link {
-      margin-top: 3px;
+        margin-top: 3px;
     }
-  }
-  
+}

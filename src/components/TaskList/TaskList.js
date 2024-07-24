@@ -21,13 +21,18 @@ const TaskList = () => {
     setTasks(tasks.map(task => (task.id === id ? updatedTask : task)));
   };
 
+  const sortedTasks = tasks.slice().sort((a, b) => {
+    const priorityOrder = { low: 1, medium: 2, high: 3 };
+    return priorityOrder[b.priority] - priorityOrder[a.priority];
+  });
+
   return (
     <div className={styles.taskListContainer}>
       <Title level={2} className={styles.taskListTitle}>My Tasks</Title>
       <TaskForm addTask={addTask} />
       <List
         className={styles.taskList}
-        dataSource={tasks}
+        dataSource={sortedTasks}
         renderItem={task => (
           <TaskItem key={task.id} task={task} removeTask={removeTask} editTask={editTask} />
         )}

@@ -1,4 +1,3 @@
-
 .taskForm {
     max-width: 600px;
     margin: 20px auto;
@@ -6,31 +5,41 @@
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Media Queries */
-  
-  /* Tablets (481px to 768px) */
-  @media (max-width: 768px) {
+    transition: all 0.3s ease;
+}
+
+.taskForm .ant-form-item {
+    margin-bottom: 16px;
+}
+
+.taskForm .ant-select {
+    width: 100%;
+}
+
+/* Media Queries */
+
+/* Tablets (481px to 768px) */
+@media (max-width: 768px) {
     .taskForm {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .ant-input,
-    .ant-input-textarea {
-      font-size: 16px;
+    .ant-input-textarea,
+    .ant-select {
+        font-size: 16px;
     }
-  }
-  
-  /* Mobile (480px and below) */
-  @media (max-width: 480px) {
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
     .taskForm {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     .ant-input,
-    .ant-input-textarea {
-      font-size: 14px;
+    .ant-input-textarea,
+    .ant-select {
+        font-size: 14px;
     }
-  }
-  
+}
